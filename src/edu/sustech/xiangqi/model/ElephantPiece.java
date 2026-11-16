@@ -12,6 +12,10 @@ public class ElephantPiece extends Piece {
         if (Math.abs(toRow - fromRow) != 2 || Math.abs(toCol - fromCol) != 2)
             return false;
         if (toCol < 0 || toCol > 8) return false; // 列判断
-        return toRow >= 5 && toRow <= 9; // 行判断
+        if (!(toRow >= 5 && toRow <= 9)) return false; // 行判断
+        int midrow = (fromRow + toRow) / 2;
+        int midcol = (fromCol + toCol) / 2;
+        if(board.getPieceAt(midrow,midcol) != null) return false;
+        return true;
     }
 }

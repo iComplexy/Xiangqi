@@ -25,8 +25,12 @@ public class Board {
         pieces[0][7] = new HorsePieceBlack();
         pieces[0][8] = new CarPieceBlack();
         for(int i=0; i<=8; i+=2) pieces[3][i] = new SoldierPieceBlack();
+        pieces[7][1] = new CannonPiece();
+        pieces[7][7] = new CannonPiece();
         // 以上是黑棋导入
         // 以下是红棋导入
+        pieces[2][1] = new CannonPieceBlack();
+        pieces[2][7] = new CannonPieceBlack();
         for(int i=0; i<=8; i+=2) pieces[6][i] = new SoldierPiece();
         pieces[9][0] = new CarPiece();
         pieces[9][1] = new HorsePiece();
